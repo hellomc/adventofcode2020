@@ -27,7 +27,7 @@ int main(){
             count++;
         }
     }
-    printf("Expenses\n%d", expenses[0]); // address of pointer to int array
+    printf("Expenses\n%d", expenses[0]); // first value in array
 
     // Find the numbers that sum to 2020 and calculate the product.
     int diff = 0;
@@ -53,7 +53,7 @@ int main(){
             prodsum = num1 * num2;
             addsum = num1 + num2;
             printf("\n%d + %d = %d", num1, num2, addsum);
-            printf("\n%d * %d = %d", num1, num2, prodsum);
+            printf("\n%d * %d = %d", num1, num2, prodsum);    //Answer is: 866436
             free(expenses);
             return prodsum;
         }
