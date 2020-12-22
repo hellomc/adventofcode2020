@@ -19,7 +19,7 @@ int main()
         sscanf(line, "%d-%d %c: %s", &mincount, &maxcount, &letter, password);
         printf("\nMin: %d Max: %d, Letter: %c, Password: %s", mincount, maxcount, letter, password);
 
-        // TODO: Count the # of times letter appears in password
+        // Count the # of times letter appears in password
         // https://www.programiz.com/c-programming/examples/freq
         no_repeat = 0;
         for (int i = 0; password[i] != '\0'; ++i) {
@@ -28,7 +28,7 @@ int main()
         }
         printf("\nletter %c occurs %d", letter, no_repeat);
 
-        // TODO: Compare this total count to see if it is within the range of [mincount, maxcount]
+        // Compare this total count to see if it is within the range of [mincount, maxcount]
         // If yes then password is valid and add to count, else password is invalid.
         if (mincount <= no_repeat && no_repeat <= maxcount) {
             no_valid++;
