@@ -17,8 +17,10 @@ int main()
     while (!feof(inFile) && fgets(line, sizeof(line), inFile)) {
         // printf("%s", line);
         sscanf(line, "%d-%d %c: %s", &mincount, &maxcount, &letter, password);
-        printf("\nMin: %d Max: %d, Letter: %c, Password: %s", mincount, maxcount, letter, password);
+        // printf("\nMin: %d Max: %d, Letter: %c, Password: %s", mincount, maxcount, letter, password);
 
+        /***** Part 1 *****/
+        /*
         // Count the # of times letter appears in password
         // https://www.programiz.com/c-programming/examples/freq
         no_repeat = 0;
@@ -33,9 +35,16 @@ int main()
         if (mincount <= no_repeat && no_repeat <= maxcount) {
             no_valid++;
         }
+        */
+
+        /***** Part 2 *****/
+        if (((password[mincount-1] == letter) ^ (password[maxcount-1] == letter))) {
+            no_valid++;
+            printf("\nMin: %d Max: %d, Letter: %c, Password: %s", mincount, maxcount, letter, password);
+        }
     }
 
-    printf("\nNo Valid Passwords: %d", no_valid);    //Answer is 586
+    printf("\nNo Valid Passwords: %d", no_valid);    // Part 1 Answer is 586. Part 2 Answer is 352.
 
     fclose(inFile);
 
